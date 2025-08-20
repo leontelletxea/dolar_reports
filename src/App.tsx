@@ -1,3 +1,4 @@
+import './App.css'; 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Card from './components/Card';
@@ -37,7 +38,7 @@ export default function App() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl mx-auto px-8 py-12 flex flex-col items-center">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
             Reportes diarios del dólar
           </h1>
@@ -48,7 +49,13 @@ export default function App() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 w-full">
           {cotizaciones.map((c, idx) => (
-            <Card key={idx} cotizacion={c} iconConfig={iconConfig} />
+            <div
+              key={idx}
+              className="animate-bounce-card"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
+              <Card cotizacion={c} iconConfig={iconConfig} />
+            </div>
           ))}
         </div>
       </main>
