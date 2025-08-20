@@ -11,7 +11,6 @@ import {
 import { useEffect, useState } from 'react';
 
 export default function App() {
-
   const [cotizaciones, setCotizaciones] = useState<any[]>([]);
 
   const iconConfig = {
