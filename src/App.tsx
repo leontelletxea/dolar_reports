@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Card from './components/Card';
+import SuscriptionModal from './components/SuscriptionModal';
 import {
   CurrencyDollarIcon,
   BanknotesIcon,
@@ -13,6 +14,7 @@ import { useEffect, useState } from 'react';
 
 export default function App() {
   const [cotizaciones, setCotizaciones] = useState<any[]>([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const iconConfig = {
     oficial: { Icon: BanknotesIcon, color: 'text-white/80' },
@@ -35,7 +37,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-white antialiased flex flex-col">
-      <Navbar />
+    <Navbar 
+      onSuscribeClick={() => setModalOpen(true)} 
+    />
 
       <main className="flex-1 max-w-7xl mx-auto px-8 py-12 flex flex-col items-center">
         <div className="text-center mb-12 animate-fade-in">
@@ -61,6 +65,8 @@ export default function App() {
       </main>
 
       <Footer />
+
+      <SuscriptionModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

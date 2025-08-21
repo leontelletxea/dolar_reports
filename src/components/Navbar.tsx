@@ -1,7 +1,11 @@
 import BlackButton from "./BlackButton";
 import WhiteButton from "./WhiteButton";
 
-const Navbar = () => {
+interface NavbarProps {
+  onSuscribeClick: () => void;
+}
+
+const Navbar = ({ onSuscribeClick } : NavbarProps) => {
   return (
     <header className="w-full bg-black text-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -15,8 +19,8 @@ const Navbar = () => {
 
         {/* BOTONES */}
         <div className="flex items-center gap-3">
-          <BlackButton>Información</BlackButton>
-          <WhiteButton>Suscribirme</WhiteButton>
+          {/* <BlackButton>Información</BlackButton> */}
+          <WhiteButton onClick={onSuscribeClick}>Suscribirme</WhiteButton>
         </div>
       </div>
     </header>
