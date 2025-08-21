@@ -9,6 +9,8 @@ import {
   CubeIcon,
   CreditCardIcon,
   BuildingLibraryIcon,
+  CircleStackIcon,
+  ArrowTrendingUpIcon
 } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 
@@ -19,10 +21,10 @@ export default function App() {
   const iconConfig = {
     oficial: { Icon: BanknotesIcon, color: 'text-white/80' },
     blue: { Icon: CurrencyDollarIcon, color: 'text-white/80' },
-    bolsa: { Icon: BuildingLibraryIcon, color: 'text-white/80' },
+    bolsa: { Icon: ArrowTrendingUpIcon, color: 'text-white/80' },
     contadoconliqui: { Icon: CubeIcon, color: 'text-white/80' },
-    mayorista: { Icon: CurrencyDollarIcon, color: 'text-white/80' },
-    cripto: { Icon: CubeIcon, color: 'text-white/80' },
+    mayorista: { Icon: BuildingLibraryIcon, color: 'text-white/80' },
+    cripto: { Icon: CircleStackIcon, color: 'text-white/80' },
     tarjeta: { Icon: CreditCardIcon, color: 'text-white/80' },
   };
 
