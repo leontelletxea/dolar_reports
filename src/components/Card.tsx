@@ -19,24 +19,23 @@ const Card = ({ cotizacion, iconConfig }: any) => {
 
   return (
     <article
-      className="relative bg-gray-900/30 backdrop-blur-sm border border-neutral-800 rounded-lg p-6 shadow-md hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] transition-transform hover:-translate-y-1"
+      className="relative bg-black backdrop-blur-sm border border-neutral-800 rounded-lg p-6 shadow-md hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] transition-transform hover:-translate-y-1 h-full flex flex-col justify-between min-w-[220px] w-72"
     >
       {/* VARIACION en esquina superior derecha */}
       <div
-        className={`absolute top-6 right-6 text-[11px] font-medium ${
-          cotizacion.change > 0
+        className={`absolute top-6 right-6 text-[11px] font-medium ${cotizacion.change > 0
             ? 'text-emerald-400'
             : cotizacion.change < 0
-            ? 'text-rose-400'
-            : 'text-white/60'
-        }`}
+              ? 'text-rose-400'
+              : 'text-white/60'
+          }`}
         hidden={true}
       >
         {cotizacion.change > 0
           ? `▲ ${cotizacion.change.toFixed(1)}%`
           : cotizacion.change < 0
-          ? `▼ ${Math.abs(cotizacion.change).toFixed(1)}%`
-          : '-0.0%'}
+            ? `▼ ${Math.abs(cotizacion.change).toFixed(1)}%`
+            : '-0.0%'}
       </div>
 
       <div className="flex items-center justify-between">
@@ -45,7 +44,7 @@ const Card = ({ cotizacion, iconConfig }: any) => {
             <Icon className={`w-6 h-6 ${color}`} />
           </div>
           <div>
-            <h2 className="text-base font-semibold text-white/90">{cotizacion.nombre}</h2>
+            <h2 className="text-base font-semibold text-white/90 truncate max-w-[120px]">{cotizacion.nombre}</h2>
             <div className="text-[11px] text-white/50">
               {formattedDate} {formattedTime}
             </div>

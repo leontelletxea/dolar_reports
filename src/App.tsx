@@ -47,11 +47,11 @@ export default function App() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 justify-center">
           {cotizaciones.map((c, idx) => (
             <div
               key={idx}
-              className="animate-bounce-card"
+              className="animate-bounce-card h-45"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <Card cotizacion={c} iconConfig={iconConfig} />
