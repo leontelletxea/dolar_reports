@@ -19,7 +19,7 @@ const Card = ({ cotizacion, iconConfig }: any) => {
 
   return (
     <article
-      className="relative bg-black backdrop-blur-sm border border-neutral-800 rounded-lg p-6 shadow-md hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] transition-transform hover:-translate-y-1 h-full flex flex-col justify-between min-w-[220px] w-72"
+      className="relative bg-black backdrop-blur-sm border border-neutral-800 rounded-lg p-6 shadow-md transition-transform hover:-translate-y-1 h-full flex flex-col justify-between min-w-[220px] w-72 hover:shadow-[0_4px_32px_0_rgba(255,255,255,0.20)]"
     >
       {/* VARIACION en esquina superior derecha */}
       <div

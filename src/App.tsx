@@ -41,28 +41,34 @@ export default function App() {
       onSuscribeClick={() => setModalOpen(true)} 
     />
 
-      <main className="flex-1 max-w-7xl mx-auto px-8 py-12 flex flex-col items-center">
-        <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
-            Reportes diarios del dólar
-          </h1>
-          <p className="mt-3 text-gray-400 text-base md:text-lg">
-            Sin anuncios, sin vueltas, tus reportes siempre al día.
-          </p>
-        </div>
+    <main className="flex-1 max-w-7xl mx-auto px-8 py-12 flex flex-col items-center">
+      <div className="text-center mb-12">
+        <h1
+          className="text-4xl md:text-5xl font-bold tracking-tight text-white animate-fade-down"
+          style={{ animationDelay: '0.1s' }}
+        >
+          Reportes diarios del dólar
+        </h1>
+        <p
+          className="mt-3 text-gray-400 text-base md:text-lg animate-fade-down"
+          style={{ animationDelay: '0.25s' }}
+        >
+          Sin anuncios, sin vueltas, tus reportes siempre al día.
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 justify-center">
-          {cotizaciones.map((c, idx) => (
-            <div
-              key={idx}
-              className="animate-bounce-card h-45"
-              style={{ animationDelay: `${idx * 0.1}s` }}
-            >
-              <Card cotizacion={c} iconConfig={iconConfig} />
-            </div>
-          ))}
-        </div>
-      </main>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 justify-center">
+        {cotizaciones.map((c, idx) => (
+          <div
+            key={idx}
+            className="h-45 animate-domino"
+            style={{ animationDelay: `${0.3 + idx * 0.12}s` }}
+          >
+            <Card cotizacion={c} iconConfig={iconConfig} />
+          </div>
+        ))}
+      </div>
+    </main>
 
       <Footer />
 

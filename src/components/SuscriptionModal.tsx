@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import WhiteButton from './WhiteButton';
 
 interface SuscriptionModalProps {
@@ -12,19 +12,44 @@ export default function SuscriptionModal({ open, onClose }: SuscriptionModalProp
   const [email, setEmail] = useState('');
   const [enviado, setEnviado] = useState(false);
 
+  // Estados para animación
+  const [show, setShow] = useState(open);
+  const [animate, setAnimate] = useState('');
+
+  useEffect(() => {
+    if (open) {
+      setShow(true);
+      setAnimate('animate-modal-in');
+    } else if (show) {
+      setAnimate('animate-modal-out');
+      const timeout = setTimeout(() => setShow(false), 550); 
+      return () => clearTimeout(timeout);
+    }
+  }, [open]);
+
+  // Limpia los campos cuando el modal termina de ocultarse
+  useEffect(() => {
+    if (!show) {
+      setNombre('');
+      setApellido('');
+      setEmail('');
+      setEnviado(false);
+    }
+  }, [show]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setEnviado(true);
     setTimeout(() => {
-        onClose(); 
-    }, 1000)
+      onClose();
+    }, 500);
   };
 
-  if (!open) return null;
+  if (!show) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-      <div className="relative bg-black border border-zinc-800 rounded-xl shadow-2xl p-8 w-full max-w-md transition-all duration-200">
+      <div className={`relative bg-black border border-zinc-800 rounded-xl shadow-2xl p-8 w-full max-w-md transition-all duration-200 ${animate}`}>
         <button
           className="absolute top-4 right-4 text-zinc-500 hover:text-white text-xl p-1 rounded transition-colors"
           onClick={onClose}
