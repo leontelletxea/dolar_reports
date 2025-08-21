@@ -19,8 +19,17 @@ const Navbar = ({ onSuscribeClick } : NavbarProps) => {
 
         {/* BOTONES */}
         <div className="flex items-center gap-3">
-          {/* <BlackButton>Información</BlackButton> */}
-          <WhiteButton onClick={onSuscribeClick}>Suscribirme</WhiteButton>
+          <BlackButton 
+            hidden={true}
+          >
+              Información
+          </BlackButton>
+          
+          <WhiteButton 
+            onClick={onSuscribeClick}
+          >
+            Suscribirme
+          </WhiteButton>
         </div>
       </div>
     </header>
