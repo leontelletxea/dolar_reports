@@ -6,7 +6,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* LOGO */}
         <div className="flex items-center gap-2">
-          <span className="font-bold text-lg text-green-700">Joyas de la Selva</span>
+          <img
+            src="/images/logo.png"
+            alt="Logo Joyas de la Selva"
+            className="h-12 w-12 object-contain"
+          />
+          <span className="font-bold text-2xl text-green-700">Joyas de la Selva</span>
         </div>
 
 

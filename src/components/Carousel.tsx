@@ -25,19 +25,23 @@ export default function Carousel() {
     <div className="relative w-full">
       {/* Carousel wrapper */}
       <div className="relative h-[42rem] overflow-hidden rounded-lg">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 block w-full h-full ${index === currentIndex ? 'block' : 'hidden'}`}
-            style={{ position: 'relative' }}
-          >
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="block w-full h-full object-cover"
-            />
-          </div>
-        ))}
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-full h-full"
+            >
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="block w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Slider indicators */}
