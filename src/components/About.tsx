@@ -6,14 +6,14 @@ export default function About() {
         <div className="relative flex justify-center">
           <div className="w-96 h-96 rounded-xl shadow-lg overflow-hidden transform rotate-2">
             <img
-              src="/public/images/about/about_2.jpg"
+              src="/images/about/about_2.jpg"
               alt="Sobre Nosotros"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="w-80 h-80 rounded-xl shadow-lg overflow-hidden transform -rotate-2 absolute top-12 left-12">
             <img
-              src="/public/images/about/about_1.jpg"
+              src="/images/about/about_1.jpg"
               alt="Sobre Nosotros"
               className="w-full h-full object-cover"
             />
