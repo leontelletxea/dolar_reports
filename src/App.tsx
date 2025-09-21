@@ -9,7 +9,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-100 text-black antialiased flex flex-col">
       <Navbar />
 
-      <main className="flex-1 max-w-7xl mx-auto py-6 flex flex-col items-center">
+      <main className="flex-1 max-w-7xl mx-auto py-14 flex flex-col items-center">
         <Carousel />
       </main>
 

@@ -2,7 +2,7 @@ import GreenButton from "./GreenButton";
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-gray-100 text-gray-800">
+    <header className="w-full bg-gray-100 text-gray-800 border-b border-neutral-300 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* LOGO */}
         <div className="flex items-center gap-2">
