@@ -1,61 +1,64 @@
-
 const Footer = () => {
   return (
-    <footer className="mt-20 border-t border-neutral-800 bg-black">
+    <footer className="mt-20 border-t border-neutral-300 bg-gray-100">
       <div className="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* BRAND */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M12 0 L24 12 L12 24 L0 12 Z" />
-            </svg>
-            <span className="text-lg font-semibold">Dolar Reports</span>
+            <span className="text-lg font-semibold text-green-700">Joyas de la selva</span>
           </div>
-          <p className="text-sm text-neutral-500 leading-relaxed max-w-xs">
-            Seguimiento del dólar en tiempo real con diseño minimalista, inspirado en el futuro.
+          <p className="text-sm text-neutral-600 leading-relaxed max-w-xs">
+            Descubre la belleza de la naturaleza con nuestras joyas únicas y artesanales.
           </p>
         </div>
 
         {/* LINKS */}
         <div>
-          <h4 className="text-xs font-semibold text-neutral-400 uppercase mb-4">Contacto</h4>
+          <h4 className="text-xs font-semibold text-green-700 uppercase mb-4">Contacto</h4>
           <ul className="space-y-3 text-sm">
             <li>
               <a
-                href="https://github.com/leontelletxea"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
+                href="https://facebook.com/joyasdelaselva"
+                className="flex items-center gap-2 text-neutral-400 hover:text-black transition-colors"
               >
                 <svg
                   className="w-4 h-4"
-                  fill="currentColor"
+                  fill="#1877F2"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M12 0C5.372 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.11.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.762-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.513 11.513 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.656 1.653.244 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.807 5.624-5.48 5.922.43.37.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.407 0 22.675 0z" />
                 </svg>
-                GitHub
+                Facebook
               </a>
             </li>
             <li>
               <a
-                href="https://linkedin.com/in/leontelletxea"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
+                href="https://wa.me/1234567890"
+                className="flex items-center gap-2 text-neutral-400 hover:text-black transition-colors"
               >
                 <svg
                   className="w-4 h-4"
-                  fill="#0A66C2"
+                  fill="#25D366"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.025-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.938v5.668h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.368-1.85 3.599 0 4.266 2.368 4.266 5.451v6.29zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.554C0 23.229.792 24 1.771 24h20.451C23.207 24 24 23.229 24 22.277V1.723C24 .771 23.207 0 22.225 0z" />
+                  <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.373 0 0 5.373 0 12c0 2.11.55 4.17 1.6 6.02L0 24l6.26-1.58A11.93 11.93 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.05c-1.9 0-3.74-.5-5.36-1.45l-.38-.22-3.71.94.99-3.62-.25-.37A9.93 9.93 0 0 1 2.05 12c0-5.48 4.47-9.95 9.95-9.95 2.66 0 5.17 1.04 7.05 2.93a9.93 9.93 0 0 1 2.93 7.05c0 5.48-4.47 9.95-9.95 9.95zm4.7-7.3c-.26-.13-1.54-.76-1.78-.85-.24-.1-.42-.13-.6.13-.18.26-.7.85-.86 1.03-.16.18-.32.2-.58.07-.26-.13-1.1-.4-2.1-1.27-.78-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.11-.11.26-.3.4-.45.13-.15.18-.26.27-.43.09-.18.04-.32-.02-.45-.07-.13-.6-1.44-.82-1.97-.22-.53-.44-.46-.6-.46h-.51c-.18 0-.45.07-.68.32-.23.26-.9.88-.9 2.15s.92 2.5 1.05 2.68c.13.18 1.8 2.74 4.35 3.84.6.26 1.07.42 1.43.54.6.19 1.15.16 1.58.1.48-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.15-1.23-.07-.11-.24-.18-.5-.3z" />
                 </svg>
-                LinkedIn
+                WhatsApp
               </a>
             </li>
             <li>
               <a
-                href="https://cafecito.app/leontellechea"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
+                href="mailto:joyasdelaselva@example.com"
+                className="flex items-center gap-2 text-neutral-400 hover:text-black transition-colors"
               >
-                ☕ Invitame un café
+                <svg
+                  className="w-4 h-4"
+                  fill="#EA4335"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 12.713L.015 6.016 0 18c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2V6.016l-12 6.697zM12 11L24 4H0l12 7z" />
+                </svg>
+                Email
               </a>
             </li>
           </ul>
@@ -63,19 +66,15 @@ const Footer = () => {
 
         {/* EXTRA */}
         <div>
-          <h4 className="text-xs font-semibold text-neutral-400 uppercase mb-4">Sobre mí</h4>
-          <p className="text-sm text-neutral-500">
-            Desarrollado por <span className="text-neutral-300 font-medium">leontelletxea</span>.
-          </p>
-          <p className="text-sm text-neutral-500 mt-2">
-            © {new Date().getFullYear()} Todos los derechos reservados.
-          </p>
+          <h4 className="text-xs font-semibold text-green-700 uppercase mb-4">Sobre mí</h4>
+          <p className="text-sm text-neutral-600">Pablo Playa</p>
+          <p className="text-sm text-neutral-600 mt-2">El Soberbio, Misiones, Argentina</p>
         </div>
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-neutral-800 py-6 text-center text-xs text-neutral-600">
-        Desarrollado con React + TailwindCSS.
+      <div className="border-t border-neutral-300 py-6 text-center text-xs text-neutral-600">
+        © 2025 Joyas de la Selva. Desarrollado por leontelletxea.
       </div>
     </footer>
   );
