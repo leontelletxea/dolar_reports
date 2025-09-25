@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="w-full h-auto">
+    <section id="about" className="w-full h-auto">
       {/* Primera sección */}
       <div className="w-full h-auto py-24 bg-yellow-50 px-6 md:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">

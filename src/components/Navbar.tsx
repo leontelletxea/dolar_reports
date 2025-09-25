@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { MouseEvent } from "react";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -8,11 +9,19 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // Opciones del menú dinámicas
   const menuOptions = [
     { label: "Inicio", href: "#" },
-    { label: "Sobre nosotros", href: "#" },
-    { label: "Galería", href: "#" },
+    { label: "Sobre nosotros", href: "#about" },
+    { label: "Galería", href: "/galeria" },
   ];
 
   return (
@@ -34,12 +43,21 @@ const Navbar = () => {
               <a 
                 key={index}
                 href={option.href} 
+                onClick={(e) => option.href.startsWith("#") && handleSmoothScroll(e, option.href.substring(1))}
                 className="hover:text-gray-300 transition-colors"
               >
                 {option.label}
               </a>
             ))}
-            <Button>Contacto</Button>
+            <Button>
+              <a
+                href="https://wa.me/+5493755516019"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contacto
+              </a>
+            </Button>
           </div>
 
           {/* BOTON MENU HAMBURGUESA */}
@@ -75,14 +93,23 @@ const Navbar = () => {
               <a 
                 key={index}
                 href={option.href} 
+                onClick={(e) => option.href.startsWith("#") && handleSmoothScroll(e, option.href.substring(1))}
                 className="text-white hover:text-gray-300 transition-colors py-2 px-4 rounded hover:bg-green-600"
-                onClick={() => setIsMenuOpen(false)}
               >
                 {option.label}
               </a>
             ))}
             <div className="px-4">
-              <Button>Contacto</Button>
+              <Button>
+                <a
+                  href="https://wa.me/+5493755516019"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-gray-300 transition-colors"
+                >
+                  Contacto
+                </a>
+              </Button>
             </div>
           </div>
         </div>
