@@ -1,6 +1,6 @@
 export default function Maps() {
   return (
-    <section className="w-full h-auto py-24 flex flex-col items-center bg-green-50">
+    <section className="w-full h-auto py-24 flex flex-col items-center bg-yellow-50">
       <h1 className="text-5xl font-extrabold mb-4 text-green-700 tracking-tight drop-shadow-lg">
         Nuestra Ubicación
       </h1>
