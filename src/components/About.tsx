@@ -1,7 +1,8 @@
 export default function About() {
   return (
     <section className="w-full h-auto py-24 bg-yellow-50 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      {/* Primera sección */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
         {/* Left Side: Images */}
         <div>
           <div className="relative flex justify-center min-h-80 md:min-h-96">
@@ -30,50 +31,74 @@ export default function About() {
 
         {/* Right Side: Text */}
         <div className="text-center md:text-left">
-          <h2 className="text-5xl font-extrabold text-green-700 mb-4">Joyeria bioinspirada</h2>
+          <h2 className="text-5xl font-extrabold text-green-700 mb-4">Más de 20 años creando joyas únicas</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            En Joyas de la Selva, nos inspiramos en la riqueza natural de Misiones para
-            crear piezas únicas que combinan elegancia y autenticidad. Cada joya es
-            un reflejo de nuestra pasión por el diseño y el respeto por la naturaleza.
+            Durante más de dos décadas, en Joyas de la Selva hemos perfeccionado el arte de
+            diseñar piezas que combinan elegancia, autenticidad y una profunda conexión
+            con la naturaleza. Cada joya cuenta una historia y refleja nuestra pasión
+            por el diseño y el respeto por el entorno natural.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
             Nuestro compromiso es ofrecer calidad excepcional y diseños exclusivos
-            que conecten con la esencia de nuestra tierra y la belleza de quienes las
-            llevan.
+            que celebren la belleza de quienes las llevan, mientras honramos la
+            riqueza cultural y natural de nuestra tierra.
           </p>
         </div>
       </div>
 
       {/* Segunda sección - Materiales */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-16">
-        {/* Left Side: Text */}
-        <div className="text-center md:text-left">
-          <h2 className="text-5xl font-extrabold text-green-700 mb-4">¿Qué materiales utilizamos?</h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            Principalmente trabajamos con alpaca, un metal noble que nos permite crear
-            piezas duraderas y con un acabado excepcional. Su maleabilidad y resistencia
-            lo convierten en el material ideal para nuestros diseños únicos.
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Complementamos nuestras creaciones con piedras semipreciosas cuidadosamente
-            seleccionadas, utilizadas tanto en el desarrollo de bombillas para mates
-            como en nuestras joyas, aportando color, energía y la magia natural de la tierra.
-          </p>
-        </div>
-
-        {/* Right Side: Image */}
-        <div className="flex flex-col items-end">
-          <div className="w-96 h-96 md:w-[28rem] md:h-[28rem] rounded-xl shadow-lg overflow-hidden">
-            <img
-              src="/images/about/about_1.jpg"
-              alt="Materiales - Alpaca y Piedras"
-              className="w-full h-full object-cover"
-            />
+      <div className="max-w-7xl mx-auto mt-24">
+        <h2 className="text-5xl font-extrabold text-green-700 text-center mb-8">¿Qué materiales utilizamos?</h2>
+        <p className="text-lg text-gray-600 leading-relaxed text-center max-w-3xl mx-auto mb-16">
+          En Joyas de la Selva, seleccionamos cuidadosamente los materiales que utilizamos
+          para garantizar la calidad y autenticidad de nuestras piezas. Cada elemento
+          cuenta una historia y refleja nuestra conexión con la naturaleza y la cultura local.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Material 1 */}
+          <div className="flex flex-col items-center">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl shadow-lg overflow-hidden">
+              <img
+                src="/images/about/materials_1.jpg"
+                alt="Alpaca y Plata"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-sm text-gray-500 mt-4 italic text-center">
+              Piedras semipreciosas<br />
+              <span className="text-xs">— dijes e incrustaciones —</span>
+            </p>
           </div>
-          <p className="text-sm text-gray-500 mt-4 italic text-right max-w-xs">
-            Alpaca y piedras semipreciosas<br />
-            <span className="text-xs">— Materiales de origen natural —</span>
-          </p>
+
+          {/* Material 2 */}
+          <div className="flex flex-col items-center">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl shadow-lg overflow-hidden">
+              <img
+                src="/images/about/materials_2.jpg"
+                alt="Piedras Semipreciosas"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-sm text-gray-500 mt-4 italic text-center">
+              Plata 925<br />
+              <span className="text-xs">— anillos y joyas —</span>
+            </p>
+          </div>
+
+          {/* Material 3 */}
+          <div className="flex flex-col items-center">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl shadow-lg overflow-hidden">
+              <img
+                src="/images/about/materials_3.jpg"
+                alt="Calabazas"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-sm text-gray-500 mt-4 italic text-center">
+              Alpaca<br />
+              <span className="text-xs">— bombillas —</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
