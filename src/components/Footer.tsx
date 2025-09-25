@@ -1,25 +1,29 @@
 const Footer = () => {
   return (
-    <footer className="mt-20 border-t border-neutral-300 bg-green-50">
-      <div className="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* BRAND */}
+    <footer className="border-t border-neutral-300 bg-green-700">
+      <div className="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        {/* LOGO */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-lg font-semibold text-green-700">Joyas de la selva</span>
+          <div className="mb-4">
+            <img
+              src="/images/logo.svg"
+              alt="Logo Joyas de la Selva"
+              className="h-8 w-auto object-contain"
+            />
           </div>
-          <p className="text-sm text-neutral-600 leading-relaxed max-w-xs">
+          <p className="text-sm text-gray-200 leading-relaxed max-w-xs">
             Descubre la belleza de la naturaleza con nuestras joyas únicas y artesanales.
           </p>
         </div>
 
         {/* LINKS */}
         <div>
-          <h4 className="text-xs font-semibold text-green-700 uppercase mb-4">Contacto</h4>
+          <h4 className="text-xs font-semibold text-gray-100 uppercase mb-4">Contacto</h4>
           <ul className="space-y-3 text-sm">
             <li>
               <a
                 href="https://facebook.com/joyasdelaselva"
-                className="flex items-center gap-2 text-neutral-400 hover:text-black transition-colors"
+                className="flex items-center gap-2 text-gray-200 hover:text-gray-400 transition-colors"
               >
                 <svg
                   className="w-4 h-4"
@@ -34,7 +38,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://wa.me/1234567890"
-                className="flex items-center gap-2 text-neutral-400 hover:text-black transition-colors"
+                className="flex items-center gap-2 text-gray-200 hover:text-gray-400 transition-colors"
               >
                 <svg
                   className="w-4 h-4"
@@ -49,7 +53,7 @@ const Footer = () => {
             <li>
               <a
                 href="mailto:joyasdelaselva@example.com"
-                className="flex items-center gap-2 text-neutral-400 hover:text-black transition-colors"
+                className="flex items-center gap-2 text-gray-200 hover:text-gray-400 transition-colors"
               >
                 <svg
                   className="w-4 h-4"
@@ -66,14 +70,14 @@ const Footer = () => {
 
         {/* EXTRA */}
         <div>
-          <h4 className="text-xs font-semibold text-green-700 uppercase mb-4">Sobre mí</h4>
-          <p className="text-sm text-neutral-600">Pablo Playa</p>
-          <p className="text-sm text-neutral-600 mt-2">El Soberbio, Misiones, Argentina</p>
+          <h4 className="text-xs font-semibold text-gray-100 uppercase mb-4">Sobre mí</h4>
+          <p className="text-sm text-gray-200">Pablo Playa</p>
+          <p className="text-sm text-gray-200 mt-2">El Soberbio, Misiones, Argentina</p>
         </div>
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-neutral-300 py-6 text-center text-xs text-neutral-600">
+      <div className="border-t border-neutral-300 py-6 text-center text-xs text-gray-200">
         © 2025 Joyas de la Selva. Desarrollado por leontelletxea.
       </div>
     </footer>

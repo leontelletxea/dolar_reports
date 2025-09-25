@@ -6,15 +6,14 @@ import Maps from './components/Maps';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-100 text-black antialiased flex flex-col">
+    <div className="min-h-screen bg-gray-100 text-black antialiased">
       <Navbar />
-
-      <main className="flex-1 max-w-7xl mx-auto py-14 flex flex-col items-center">
-        <Carousel />
-      </main>
+  
+      <Carousel />
 
       <About />
       <Maps />
+      
       <Footer />
     </div>
   );
